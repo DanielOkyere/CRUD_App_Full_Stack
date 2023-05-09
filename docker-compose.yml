@@ -1,0 +1,16 @@
+version: '3'
+services:
+  app:
+    build: ./
+    volumes:
+      - ./:/usr/src/CRUD_APP_FULL_STACK
+    ports:
+      - 8080:8000
+      - 8081:5173
+
+  proxy:
+    build: nginx
+    ports:
+      - 3000:80
+    depends_on:
+      - app
