@@ -11,7 +11,7 @@ class User(Base):
         and creates user model
     """
     __tablename__ = "users"
-    id = Column(String, primary_key=True, index=True)
+    id = Column(Integer, primary_key=True, index=True)
     first_name = Column(String, index=True)
     last_name = Column(String)
     phone_number = Column(String, unique=True, index=True)

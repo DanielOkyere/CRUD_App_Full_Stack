@@ -26,7 +26,6 @@ def create_user(db: Session, user: UserCreate) -> User:
         Persisted user model in database
     """
     db_user = User(
-        id=uuid4(),
         first_name=user.first_name,
         last_name=user.last_name,
         phone_number=user.phone_number
@@ -45,7 +44,7 @@ def delete_user(db: Session, id: str) -> User:
         User object that was removed
     """
     if isinstance(id, str):
-        user = db.query(User).filter_by(User.id == id).first()
+        user = db.query(User).filter(User.id == id).first()
         db.delete(user)
         db.commit()
         return user
