@@ -7,19 +7,19 @@ function Add() {
     const [lastName, setLastName] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');
 
-    function handleFirstNameChange(e) {
+    function handleFirstNameChange(e: React.ChangeEvent<HTMLInputElement>) {
         setFirstName(e.target.value);
     }
 
-    function handleLastNameChange(e) {
+    function handleLastNameChange(e: React.ChangeEvent<HTMLInputElement>) {
         setLastName(e.target.value);
     }
 
-    function handlePhoneNumberChange(e) {
+    function handlePhoneNumberChange(e: React.ChangeEvent<HTMLInputElement>) {
         setPhoneNumber(e.target.value);
     }
 
-    function handleSubmit(e) {
+    function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
         const newUser = {
             "first_name": firstName,

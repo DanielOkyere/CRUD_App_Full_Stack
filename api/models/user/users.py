@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """ User Class """
 
-from api.database import Base
+from db.database import Base
 from sqlalchemy import Column, Integer, String, Boolean
 
 class User(Base):

@@ -2,8 +2,8 @@
 """ Init File For CRUD API"""
 
 from fastapi import FastAPI, Depends, Request
-from api.database import engine, Base
-from api.routes import user_routes
+from db.database import engine, Base
+from routes import user_routes
 from fastapi.middleware.cors import CORSMiddleware
 
 Base.metadata.create_all(bind=engine)
@@ -26,4 +26,4 @@ app.include_router(user_routes.router)
 
 @app.get('/')
 async def home():
-    return "API is Alive"
+    return {"message": "API is Alive"}

@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { userInterface } from "../../interfaces";
 import { deleteUser } from "../../data/user_service";
 
@@ -7,8 +6,6 @@ type Props = {
 }
 
 function Result({ users }: Props) {
-
-    const [selectedUser, setSelectedUser] = useState(null);
     function handleOnDeleteClick(user: userInterface) {
         deleteUser(user.id)
     }

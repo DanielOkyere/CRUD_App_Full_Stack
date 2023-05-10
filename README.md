@@ -9,8 +9,7 @@ CRUD Full Stack Application
 -- React
 -- Typescript
 -- Tailwindcss
--- Docker
--- Unittest
+-- Pytest
 -- postgres
 
 ## Environment Variables
@@ -23,10 +22,10 @@ Then execute the following lines
 $ cd CRUD_APP_FULL_STACK
 $ python3 -m venv env 
 $ source env/bin/activate && pip install -r ./requirements.txt
-$ cd ./frontent & npm run dev
+$ cd ./frontent & npm run develop
 ```
-once application is running API docs can be found on http://localhost:8000/docs
-and application can be found on http://localhost:5173
+once  web server is running API docs can be found on http://localhost:8000/docs
+and Frontend application can be found on http://localhost:5173
 
 ## Author
 - **Daniel K. Okyere**

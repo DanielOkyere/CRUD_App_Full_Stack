@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Handle Db Sessions"""
 
-from api.database import SessionLocal
+from db.database import SessionLocal
 
 def get_db():
     db = SessionLocal()
