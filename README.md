@@ -28,7 +28,9 @@ Then execute the following lines.
 $ cd CRUD_App_Full_Stack
 $ python3 -m venv env 
 $ source env/bin/activate && pip install -r ./requirements.txt
-$ cd ./frontent & npm i && npm run develop
+$ cd ./frontent 
+$ npm install
+$ npm run develop
 ```
 Once  web server is running API docs can be found on http://localhost:8000/docs
 

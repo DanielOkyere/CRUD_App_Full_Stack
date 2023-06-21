@@ -70,3 +70,11 @@ def get_user(db: Session, id: str):
     """
     return db.query(User).filter(User.id == id).first()
 
+def update_user(db: Session, arg):
+    """Updates User in db"""
+    db_user = get_user(db=db, id=arg['id'])
+    for k, v in arg:
+        if k in db_user:
+            setattr(db_user, k, v)
+    db.add(db_user)
+    db.commit()

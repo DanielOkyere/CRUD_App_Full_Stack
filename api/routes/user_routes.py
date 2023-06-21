@@ -32,3 +32,14 @@ def read_user(user_id: str, db: Session = Depends(get_db)):
 @router.delete("/{user_id}")
 def delete_user(user_id: str, db: Session = Depends(get_db)):
     user = crud.delete_user(db, id=user_id)
+
+
+@router.put("/{user_id}", response_model=schemas.UserCreate)
+def update_user(user: schemas.UserCreate, db: Session = Depends(get_db)):
+    try:
+        updated_user = crud.update_user(db, user)
+        return update_user
+    except:
+        raise HTTPException(status_code=404, detail="Update Failed")
+    
+    

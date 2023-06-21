@@ -3,7 +3,7 @@
 
 from fastapi import FastAPI, Depends, Request
 from db.database import engine, Base
-from routes import user_routes
+from routes import user_routes, task_routes
 from fastapi.middleware.cors import CORSMiddleware
 
 Base.metadata.create_all(bind=engine)
@@ -22,6 +22,7 @@ app.add_middleware(
 )
 
 app.include_router(user_routes.router)
+app.include_router(task_routes.router)
 
 
 @app.get('/')
