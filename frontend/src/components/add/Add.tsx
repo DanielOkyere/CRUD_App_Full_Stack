@@ -40,7 +40,7 @@ function Add() {
         <>
             <button onClick={handleOnClick}
                 className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                + Add Contact
+                + Add Task
             </button>
             {isOpen === true &&
                 <div className="fixed z-10 inset-0 overflow-y-auto">
@@ -60,7 +60,7 @@ function Add() {
                                     className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
                                         type="text"
                                         id="first-name"
-                                        name="first-name"
+                                        name="Task"
                                         value={firstName}
                                         onChange={handleFirstNameChange}
                                         required
@@ -72,7 +72,7 @@ function Add() {
                                     className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
                                         type="text"
                                         id="last-name"
-                                        name="last-name"
+                                        name="Description"
                                         value={lastName}
                                         onChange={handleLastNameChange}
                                         required

@@ -34,7 +34,7 @@ $ uvicorn app:app --reload
 This can be run in another terminal
 
 ```
-$ cd ./frontent 
+$ cd ./frontend
 $ npm install
 $ npm run develop
 ```

@@ -15,12 +15,11 @@ function App() {
   }, [])
 
   return (
-    <div className='container mx-auto'>
-      <h1 className='text-3xl font-bold title flex justify-center items-center'>
-        <i className="fas fa-address-book px-2"></i>
-        Phonebook App</h1>
+    <div className='container mx-auto my-xl'>
+      <h1 className='text-3xl font-bold title flex justify-center items-center mx-auto'>
+        Task App</h1>
       <div className='flex justify-around'>
-        Contacts
+        Tasks
         <Add></Add>
       </div>
       <div>
